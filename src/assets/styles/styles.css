@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap');
+
+:root{
+
+  /* Colors */
+  --background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  --Dark: hsl(229, 25%, 31%);
+  --Score: hsl(229, 64%, 46%);
+  --Header: hsl(217, 16%, 45%);
+
+  --Scissors: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --Paper: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --Rock: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+
+  /* fonts */
+  --poppins: 'Poppins', sans-serif;
+}
+
+/* Typography */
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/poppins/Poppins-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/poppins/Poppins-Italic.woff) format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/poppins/Poppins-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/poppins/Poppins-MediumItalic.woff) format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/poppins/Poppins-SemiBold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/poppins/Poppins-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Globals */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--poppins);
+}
+
+.App{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-image: var(--background);
+}
