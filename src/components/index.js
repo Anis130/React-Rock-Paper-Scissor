@@ -1,7 +1,19 @@
-import { Header } from "./Header"
-import { Play } from "./Play"
-import { Game } from "./Game"
-import { Modal } from "./Modal"
-import { Footer } from "./Footer"
+import Header from "./Header";
+import Play from "./Play";
+import Game from "./Game";
+import Modal from "./Modal";
+import Footer from "./Footer";
+import History from "./History";
+import NewGameButton from "./basicComponents/NewGameButton";
+import GameOverModal from "./basicComponents/GameOverModal";
 
-export {Header, Play, Game, Modal, Footer}
+export {
+  Header,
+  Play,
+  Game,
+  Modal,
+  Footer,
+  History,
+  NewGameButton,
+  GameOverModal,
+};

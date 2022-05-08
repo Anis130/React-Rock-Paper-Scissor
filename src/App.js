@@ -1,12 +1,36 @@
-import './assets/styles/styles.css'
+import "./assets/styles/styles.css";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Header, Play, Game, Footer, GameOverModal } from "./components";
+import { PlayerScoreProvider, BotScoreProvider } from "./context";
 
 function App() {
+  const [choice, setChoice] = useState("");
+  const [gameOver, setGameOver] = useState(false);
+  const [win, setWin] = useState(false);
+
   return (
     <div className="App">
-       <p>app</p>
-       <Routes>
-        <Route></Route>
-       </Routes>
+      <PlayerScoreProvider>
+        <BotScoreProvider>
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<Play setChoice={setChoice} />} />
+            <Route
+              path="/game"
+              element={
+                <Game
+                  choice={choice}
+                  setWin={setWin}
+                  setGameOver={setGameOver}
+                />
+              }
+            />
+          </Routes>
+        </BotScoreProvider>
+      </PlayerScoreProvider>
+      <GameOverModal win={win} gameOver={gameOver} />
+      <Footer />
     </div>
   );
 }
