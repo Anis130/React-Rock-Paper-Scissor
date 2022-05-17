@@ -1,5 +1,5 @@
 import "./assets/styles/styles.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Header, Play, Game, Footer, GameOverModal } from "./components";
 import {
