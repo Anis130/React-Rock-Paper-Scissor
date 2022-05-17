@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { NewGameButton } from "./";
+import "../assets/styles/play.css";
 
 function Play({ setChoice }) {
   function handleChoice(e) {
@@ -9,25 +9,31 @@ function Play({ setChoice }) {
 
   return (
     <div className="play">
-      <Link to="/game">
-        <div data-id="rock" onClick={handleChoice} className="icon rock">
-          rock
-        </div>
-      </Link>
+      <div className="play-container">
+        <Link to="/game">
+          <div
+            data-id="rock"
+            onClick={handleChoice}
+            className="icon rock"
+          ></div>
+        </Link>
 
-      <Link to="/game">
-        <div data-id="paper" onClick={handleChoice} className="icon paper">
-          paper
-        </div>
-      </Link>
+        <Link to="/game">
+          <div
+            data-id="paper"
+            onClick={handleChoice}
+            className="icon paper"
+          ></div>
+        </Link>
 
-      <Link to="/game">
-        <div data-id="scissor" onClick={handleChoice} className="icon scissor">
-          scissor
-        </div>
-      </Link>
-
-      <NewGameButton />
+        <Link to="/game">
+          <div
+            data-id="scissors"
+            onClick={handleChoice}
+            className="icon scissors"
+          ></div>
+        </Link>
+      </div>
     </div>
   );
 }

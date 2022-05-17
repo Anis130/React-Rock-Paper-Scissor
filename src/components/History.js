@@ -1,11 +1,14 @@
-import React from "react";
-import { useContext } from "react/cjs/react.production.min";
+import React, { useContext } from "react";
 import { HistoryContext } from "../context";
 
-function History() {
+function History({ props }) {
   // const { history } = useContext(HistoryContext);
 
-  return <div className="history">History</div>;
+  return (
+    <button className="footer-item history" {...props}>
+      History
+    </button>
+  );
 }
 
 export default History;

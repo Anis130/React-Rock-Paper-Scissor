@@ -1,17 +1,17 @@
 import Header from "./Header";
 import Play from "./Play";
 import Game from "./Game";
-import Modal from "./Modal";
+import Rules from "./Rules";
 import Footer from "./Footer";
 import History from "./History";
 import NewGameButton from "./basicComponents/NewGameButton";
-import GameOverModal from "./GameOverModal";
+import GameOverModal from "./basicComponents/GameOverModal";
 
 export {
   Header,
   Play,
   Game,
-  Modal,
+  Rules,
   Footer,
   History,
   GameOverModal,

@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap");
-
 :root {
   /* Colors */
   --background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   --Dark: hsl(229, 25%, 31%);
-  --Score: hsl(229, 64%, 46%);
+  --SoftWhite: hsl(51, 47%, 97%);
+  --Score: hsla(229, 64%, 46%, 0.789);
   --Header: hsl(217, 16%, 45%);
+  --Shadow--grey: rgba(128, 128, 128, 0.5);
 
-  --Scissors: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  --Paper: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  --Rock: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --Scissors: hsl(39, 89%, 49%);
+  --Paper: hsl(230, 89%, 62%);
+  --Rock: hsl(349, 71%, 52%);
+  --Darker-Scissors: hsl(39, 88%, 39%);
+  --Darker-Paper: hsl(230, 89%, 52%);
+  --Darker-Rock: hsl(349, 71%, 42%);
 
   /* fonts */
   --poppins: "Poppins", sans-serif;
@@ -19,7 +22,7 @@
 @font-face {
   font-family: Poppins;
   src: url(../fonts/poppins/Poppins-Regular.woff) format("woff");
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -79,4 +82,53 @@
 
 .hide {
   display: none;
+}
+
+button {
+  background-color: #ffffff00;
+  color: var(--SoftWhite);
+}
+
+.newGameButton {
+  text-decoration: none;
+  color: white;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--SoftWhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 200ms ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+}
+
+.icon:hover {
+  width: 130px;
+  height: 130px;
+}
+
+.rock {
+  background-image: url(../images/icon-rock.svg);
+  border: 15px solid var(--Rock);
+  box-shadow: inset 0px 3px 2px var(--Shadow--grey), 0px 5px var(--Darker-Rock);
+}
+
+.paper {
+  background-image: url(../images/icon-paper.svg);
+  border: 15px solid var(--Paper);
+  box-shadow: inset 0px 3px 2px var(--Shadow--grey), 0px 5px var(--Darker-Paper);
+}
+
+.scissors {
+  background-image: url(../images/icon-scissors.svg);
+  border: 15px solid var(--Scissors);
+  box-shadow: inset 0px 3px 2px var(--Shadow--grey),
+    0px 5px var(--Darker-Scissors);
 }

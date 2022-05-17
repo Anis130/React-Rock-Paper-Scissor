@@ -1,22 +1,42 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   padding: 5px 10px;
-  background-color: #fbfaf5;
-  color: var(--Header);
+  width: 500px;
+  background-color: #ffffff00;
+  border: 3px solid var(--Header);
+  border-radius: 20px;
+  margin-top: 20px;
+  color: var(--SoftWhite);
 }
 
 .header > p {
   margin-right: 30px;
+  font-size: 2.2rem;
 }
 
 .score-container {
-  margin: 5px;
-  text-align: center;
+  display: flex;
 }
 
-.score-container > p {
+.score-item {
+  margin: 5px;
+  text-align: center;
+  color: var(--Dark);
+  background-color: var(--SoftWhite);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.score-item > p {
   color: var(--Score);
+  font-weight: 600;
+}
+
+.score {
+  font-weight: 800;
+  font-size: 2rem;
 }

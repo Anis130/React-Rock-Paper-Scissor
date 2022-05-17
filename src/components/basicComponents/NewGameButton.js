@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { PlayerScoreContext, BotScoreContext } from "../../context";
 
-function NewGameButton({ setGameOver }) {
+function NewGameButton({ setGameOver, classes }) {
   const { setPlayerScore } = useContext(PlayerScoreContext);
   const { setBotScore } = useContext(BotScoreContext);
 
@@ -14,7 +15,11 @@ function NewGameButton({ setGameOver }) {
   }
 
   return (
-    <Link to="/" onClick={() => newGame()}>
+    <Link
+      className={`newGameButton ${classes} `}
+      to="/"
+      onClick={() => newGame()}
+    >
       New Game
     </Link>
   );

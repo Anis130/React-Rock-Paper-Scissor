@@ -59,8 +59,11 @@ function Game({ choice, setGameOver, setWin }) {
       <p>Round Result {roundResult}</p>
       Your choice :{choice} <br />
       Bot :{bot} <br />
-      <NewGameButton />
-      {(playerScore || botScore) !== 2 ? <Link to="/">Next Round</Link> : ""}
+      {(playerScore || botScore) !== 2 ? (
+        <Link to="/">Next Round</Link>
+      ) : (
+        <NewGameButton />
+      )}
     </div>
   );
 }

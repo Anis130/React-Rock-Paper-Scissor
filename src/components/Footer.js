@@ -1,11 +1,14 @@
 import React from "react";
-import { Modal, History } from "./";
+import { Rules, History } from "./";
+import { NewGameButton } from "./";
+import "../assets/styles/footer.css";
 
-function Footer() {
+function Footer({ setGameOver }) {
   return (
     <div className="footer">
-      <History className="footer-item" />
-      <Modal className="footer-item" />
+      <NewGameButton setGameOver={setGameOver} classes="footer-item" />
+      <History />
+      <Rules />
     </div>
   );
 }

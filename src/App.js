@@ -33,10 +33,10 @@ function App() {
             />
           </Routes>
           {/* </HistoryProvider> */}
+          <GameOverModal win={win} gameOver={gameOver} />
+          <Footer />
         </BotScoreProvider>
       </PlayerScoreProvider>
-      <GameOverModal win={win} gameOver={gameOver} />
-      <Footer />
     </div>
   );
 }

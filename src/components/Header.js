@@ -12,12 +12,14 @@ function Header() {
       <p>Scores : </p>
 
       <div className="score-container">
-        <p>You</p>
-        <div>{playerScore}</div>
-      </div>
-      <div className="score-container">
-        <p>Bot</p>
-        <div>{botScore}</div>
+        <div className="score-item">
+          <p>You</p>
+          <div className="score">{playerScore}</div>
+        </div>
+        <div className="score-item">
+          <p>Bot</p>
+          <div className="score">{botScore}</div>
+        </div>
       </div>
     </div>
   );
