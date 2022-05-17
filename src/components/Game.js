@@ -1,31 +1,36 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import { PlayerScoreContext } from "../context";
 import { BotScoreContext } from "../context";
+import { NewGameButton } from "./";
 
 function Game({ choice, setGameOver, setWin }) {
   const [bot, setBot] = useState("");
+  const [roundResult, setRoundResult] = useState("");
   const { playerScore, setPlayerScore } = useContext(PlayerScoreContext);
   const { botScore, setBotScore } = useContext(BotScoreContext);
-
-  useEffect(() => {
-    botPick();
-  }, []);
 
   function judgeRound(player, bot) {
     if (player === "rock" && bot === "scissor") {
       setPlayerScore(playerScore + 1);
+      setRoundResult("Win");
     } else if (player === "rock" && bot === "paper") {
       setBotScore(botScore + 1);
+      setRoundResult("Lose");
     } else if (player === "paper" && bot === "rock") {
       setPlayerScore(playerScore + 1);
+      setRoundResult("Win");
     } else if (player === "paper" && bot === "scissor") {
       setBotScore(botScore + 1);
+      setRoundResult("Lose");
     } else if (player === "scissor" && bot === "rock") {
       setBotScore(botScore + 1);
+      setRoundResult("Lose");
     } else if (player === "scissor" && bot === "paper") {
       setPlayerScore(playerScore + 1);
+      setRoundResult("Win");
     } else {
-      return "draw";
+      setRoundResult("Draw");
     }
   }
 
@@ -35,20 +40,27 @@ function Game({ choice, setGameOver, setWin }) {
   }
 
   useEffect(() => {
+    botPick();
+  }, []);
+
+  useEffect(() => {
     judgeRound(choice, bot);
   }, [bot]);
 
-  if (playerScore === 1) {
-    setGameOver(true);
+  if (playerScore === 2) {
     setWin(true);
-  } else if (botScore === 1) {
+    setGameOver(true);
+  } else if (botScore === 2) {
     setGameOver(true);
   }
 
   return (
     <div>
-      Yout choice :{choice} <br />
+      <p>Round Result {roundResult}</p>
+      Your choice :{choice} <br />
       Bot :{bot} <br />
+      <NewGameButton />
+      {(playerScore || botScore) !== 2 ? <Link to="/">Next Round</Link> : ""}
     </div>
   );
 }

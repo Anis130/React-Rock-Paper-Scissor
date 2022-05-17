@@ -6,7 +6,7 @@ function NewGameButton({ setGameOver }) {
   const { setPlayerScore } = useContext(PlayerScoreContext);
   const { setBotScore } = useContext(BotScoreContext);
 
-  // reset scores
+  // scores reset
   function newGame() {
     setPlayerScore(0);
     setBotScore(0);

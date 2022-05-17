@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  padding: 5px 10px;
+  background-color: #fbfaf5;
+  color: var(--Header);
+}
+
+.header > p {
+  margin-right: 30px;
+}
+
+.score-container {
+  margin: 5px;
+  text-align: center;
+}
+
+.score-container > p {
+  color: var(--Score);
+}

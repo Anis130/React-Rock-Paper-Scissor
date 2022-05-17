@@ -27,7 +27,7 @@ function Play({ setChoice }) {
         </div>
       </Link>
 
-      <NewGameButton></NewGameButton>
+      <NewGameButton />
     </div>
   );
 }

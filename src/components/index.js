@@ -5,7 +5,7 @@ import Modal from "./Modal";
 import Footer from "./Footer";
 import History from "./History";
 import NewGameButton from "./basicComponents/NewGameButton";
-import GameOverModal from "./basicComponents/GameOverModal";
+import GameOverModal from "./GameOverModal";
 
 export {
   Header,
@@ -14,6 +14,6 @@ export {
   Modal,
   Footer,
   History,
-  NewGameButton,
   GameOverModal,
+  NewGameButton,
 };
