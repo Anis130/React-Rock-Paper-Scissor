@@ -1,0 +1,14 @@
+.rulesModal {
+  background-color: var(--SoftWhite);
+  padding: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 5%;
+}
+
+.close {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}

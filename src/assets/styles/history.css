@@ -1,0 +1,31 @@
+.history {
+  background: var(--SoftWhite);
+  width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Dark);
+}
+
+.history p {
+  color: var(--DarkBlue);
+}
+
+.table {
+  width: 900px;
+  height: 500px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.wrraper {
+  display: grid;
+  grid-template-columns: 10% 20% 20% 30% 20%;
+  margin-bottom: 10px;
+}
+
+.wrraper_header {
+  margin-bottom: 20px;
+}
