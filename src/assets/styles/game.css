@@ -1,0 +1,22 @@
+.game {
+  height: calc(100% - 250px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 180px;
+}
+
+.roundResult {
+  text-align: center;
+}
+
+.roundResult h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  transform: translateY(-20%);
+}
+
+.nextRoundButton {
+  transform: translateY(200%);
+}

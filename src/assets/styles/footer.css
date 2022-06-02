@@ -1,0 +1,13 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 70px 30px 70px;
+  gap: 50px;
+}
+
+.footer-item:hover {
+  cursor: pointer;
+}

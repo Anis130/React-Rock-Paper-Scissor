@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
-import { PlayerScoreContext } from "../context";
-import { BotScoreContext } from "../context";
+import { ScoreContext } from "../context";
 import "../assets/styles/header.css";
 
 function Header() {
-  const { playerScore } = useContext(PlayerScoreContext);
-  const { botScore } = useContext(BotScoreContext);
+  const { playerScore, botScore } = useContext(ScoreContext);
 
   return (
     <div className="header">

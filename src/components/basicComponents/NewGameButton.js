@@ -1,11 +1,11 @@
 import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { PlayerScoreContext, BotScoreContext } from "../../context";
+import { ScoreContext, GameOverContext } from "../../context";
 
-function NewGameButton({ setGameOver, classes }) {
-  const { setPlayerScore } = useContext(PlayerScoreContext);
-  const { setBotScore } = useContext(BotScoreContext);
+function NewGameButton({ classes = "primary-button" }) {
+  const { setPlayerScore, setBotScore } = useContext(ScoreContext);
+  const { setGameOver } = useContext(GameOverContext);
 
   // scores reset
   function newGame() {

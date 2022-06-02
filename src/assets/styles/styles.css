@@ -89,16 +89,28 @@ button {
   color: var(--SoftWhite);
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .newGameButton {
   text-decoration: none;
   color: white;
+}
+
+.primary-button {
+  border: 2px solid var(--SoftWhite);
+  font-size: 1.1rem;
+  border-radius: 20px;
+  padding: 10px 15px;
+  transition: 300ms ease-in-out;
 }
 
 .icon {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
   background-color: var(--SoftWhite);
   display: flex;
   justify-content: center;
@@ -107,11 +119,6 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 45%;
-}
-
-.icon:hover {
-  width: 130px;
-  height: 130px;
 }
 
 .rock {

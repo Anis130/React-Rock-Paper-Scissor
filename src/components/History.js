@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
-import { HistoryContext } from "../context";
+import React from "react";
 
 function History({ props }) {
-  // const { history } = useContext(HistoryContext);
-
   return (
-    <button className="footer-item history" {...props}>
+    <button className="primary-button history" {...props}>
       History
     </button>
   );
