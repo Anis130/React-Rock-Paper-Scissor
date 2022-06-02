@@ -1,9 +1,9 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ScoreContext, GameOverContext } from "../../context";
+import { GlobalButton } from "../index";
 
-function NewGameButton({ classes = "primary-button" }) {
+function NewGameButton({ classes = "" }) {
   const { setPlayerScore, setBotScore } = useContext(ScoreContext);
   const { setGameOver } = useContext(GameOverContext);
 
@@ -15,13 +15,11 @@ function NewGameButton({ classes = "primary-button" }) {
   }
 
   return (
-    <Link
-      className={`newGameButton ${classes} `}
-      to="/"
-      onClick={() => newGame()}
-    >
-      New Game
-    </Link>
+    <GlobalButton classes={`global-btn ${classes}`}>
+      <Link to="/" onClick={() => newGame()}>
+        New Game
+      </Link>
+    </GlobalButton>
   );
 }
 

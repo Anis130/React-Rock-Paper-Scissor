@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import History from "./History";
 import NewGameButton from "./basicComponents/NewGameButton";
 import GameOverModal from "./basicComponents/GameOverModal";
+import GlobalButton from "./basicComponents/GlobalButton";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   History,
   GameOverModal,
   NewGameButton,
+  GlobalButton,
 };

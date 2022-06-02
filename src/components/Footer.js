@@ -3,10 +3,10 @@ import { Rules, History } from "./";
 import { NewGameButton } from "./";
 import "../assets/styles/footer.css";
 
-function Footer({ setGameOver }) {
+function Footer() {
   return (
     <div className="footer">
-      <NewGameButton setGameOver={setGameOver} classes="primary-button" />
+      <NewGameButton />
       <History />
       <Rules />
     </div>

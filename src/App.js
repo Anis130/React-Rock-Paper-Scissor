@@ -2,7 +2,7 @@ import "./assets/styles/styles.css";
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Header, Play, Game, Footer, GameOverModal } from "./components";
-import { ScoreProvider, GameOverProvider } from "./context";
+import { ScoreProvider, GameOverProvider, HistoryProvider } from "./context";
 
 function App() {
   const [choice, setChoice] = useState("");
@@ -20,8 +20,10 @@ function App() {
               element={<Game choice={choice} setWin={setWin} />}
             />
           </Routes>
-          <GameOverModal win={win} />
-          <Footer />
+          <HistoryProvider>
+            <GameOverModal win={win} />
+            <Footer />
+          </HistoryProvider>
         </GameOverProvider>
       </ScoreProvider>
     </div>

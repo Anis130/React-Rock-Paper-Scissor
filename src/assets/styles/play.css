@@ -7,10 +7,6 @@
 }
 
 .play-container {
-  background-image: url(../images/bg-triangle.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
   position: relative;
   width: 500px;
   height: 100%;
@@ -21,11 +17,11 @@
 }
 
 .play .paper {
-  transform: translateY(110%);
+  transform: translateY(-80%);
 }
 
 .play .rock {
-  transform: translateY(-80%);
+  transform: translateY(110%);
 }
 
 .play .scissors {

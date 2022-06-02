@@ -5,7 +5,8 @@
   --SoftWhite: hsl(51, 47%, 97%);
   --Score: hsla(229, 64%, 46%, 0.789);
   --Header: hsl(217, 16%, 45%);
-  --Shadow--grey: rgba(128, 128, 128, 0.5);
+  --ShadowGrey: rgba(128, 128, 128, 0.5);
+  --DarkBlue: hsl(237, 49%, 15%);
 
   --Scissors: hsl(39, 89%, 49%);
   --Paper: hsl(230, 89%, 62%);
@@ -69,7 +70,6 @@
   font-family: var(--poppins);
 }
 
-/* Utilities */
 .App {
   width: 100%;
   height: 100vh;
@@ -78,10 +78,6 @@
   align-items: center;
   color: white;
   background-image: var(--background);
-}
-
-.hide {
-  display: none;
 }
 
 button {
@@ -94,17 +90,72 @@ a {
   color: white;
 }
 
-.newGameButton {
-  text-decoration: none;
-  color: white;
+input[type="text"]:focus {
+  outline: none;
 }
 
-.primary-button {
+.global-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
   border: 2px solid var(--SoftWhite);
-  font-size: 1.1rem;
   border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.global-btn a {
   padding: 10px 15px;
-  transition: 300ms ease-in-out;
+}
+
+/* scrollbar */
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: var(--DarkBlue) #ffffff00;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--SoftWhite);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--DarkBlue);
+  border-radius: 50px;
+}
+
+/* Utilities */
+
+.hide {
+  display: none;
+}
+
+.padding10-15 {
+  padding: 10px 15px;
+}
+
+.modal-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .icon {
@@ -124,18 +175,18 @@ a {
 .rock {
   background-image: url(../images/icon-rock.svg);
   border: 15px solid var(--Rock);
-  box-shadow: inset 0px 3px 2px var(--Shadow--grey), 0px 5px var(--Darker-Rock);
+  box-shadow: inset 0px 3px 2px var(--ShadowGrey), 0px 5px var(--Darker-Rock);
 }
 
 .paper {
   background-image: url(../images/icon-paper.svg);
   border: 15px solid var(--Paper);
-  box-shadow: inset 0px 3px 2px var(--Shadow--grey), 0px 5px var(--Darker-Paper);
+  box-shadow: inset 0px 3px 2px var(--ShadowGrey), 0px 5px var(--Darker-Paper);
 }
 
 .scissors {
   background-image: url(../images/icon-scissors.svg);
   border: 15px solid var(--Scissors);
-  box-shadow: inset 0px 3px 2px var(--Shadow--grey),
+  box-shadow: inset 0px 3px 2px var(--ShadowGrey),
     0px 5px var(--Darker-Scissors);
 }

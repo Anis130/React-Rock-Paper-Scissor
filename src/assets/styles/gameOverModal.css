@@ -1,16 +1,44 @@
-.modalContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
+.gameOverModal {
+  width: 600px;
+  height: 400px;
+  background-image: linear-gradient(to bottom right, var(--SoftWhite), yellow);
+  border-radius: 30px;
+  color: var(--DarkBlue);
+  text-align: center;
+  padding: 40px 0;
 }
 
-.gameOverModal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(50%, 50%);
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+.gameOverModal h1,
+h3,
+input {
+  margin-bottom: 30px;
+}
+
+.gameOverModal input[type="text"] {
+  padding: 16px;
+  border: 0.1px solid var(--DarkBlue);
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.gameOverModal .modal-btn {
+  border: 2px solid var(--DarkBlue);
+  color: var(--DarkBlue);
+  font-size: 1.1rem;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.restart {
+  width: fit-content;
+  margin: auto;
+  border: 2px solid var(--DarkBlue);
+  color: var(--DarkBlue);
+  font-size: 1.1rem;
+}
+
+.restart a {
+  color: var(--DarkBlue);
 }

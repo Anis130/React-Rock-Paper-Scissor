@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { GameOverContext, ScoreContext } from "../context";
-import { NewGameButton } from "./";
+import { NewGameButton, GlobalButton } from "./";
 import "../assets/styles/game.css";
 
 function Game({ choice, setWin }) {
@@ -64,11 +64,11 @@ function Game({ choice, setWin }) {
         <h1> {roundResult} </h1>
 
         {(playerScore || botScore) !== 2 ? (
-          <div className="nextRoundButton">
+          <GlobalButton>
             <Link to="/" className="primary-button ">
               Next Round
             </Link>
-          </div>
+          </GlobalButton>
         ) : (
           /* to be changed to setGameOverModal to true */
           <NewGameButton setGameOver={setGameOver} classes="primary-button" />
